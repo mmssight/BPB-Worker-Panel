@@ -101,7 +101,7 @@ export default {
                         const warpConfig = await getWarpConfigs(env, client);
                         return new Response(`${JSON.stringify(warpConfig, null, 4)}`, { status: 200 });
 
-                    case '/${userID}':
+                    case `/${userID}`:
 
                         if (typeof env.bpb !== 'object') {
                             const errorPage = renderErrorPage('KV Dataset is not properly set!', null, true);
